@@ -5,7 +5,7 @@ import loginRequired from "../middlewares/loginRequired.js";
 const rotas = Router();
 const usuario = new UsuarioController();
 
-// rotas.get("/usuarios", usuario.listarTodos);
+rotas.get("/usuarios", usuario.listarTodos);
 // rotas.get("/usuarios/:id", usuario.listarPorId);
 
 rotas.post("/usuarios", usuario.criarUsuario);

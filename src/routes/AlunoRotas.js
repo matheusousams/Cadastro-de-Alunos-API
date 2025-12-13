@@ -5,8 +5,8 @@ import loginRequired from "../middlewares/loginRequired.js";
 const rotas = Router();
 const aluno = new AlunoController();
 
-rotas.get("/alunos", aluno.listarTodos);
-rotas.get("/alunos/:id", aluno.listarPorId);
+rotas.get("/alunos", loginRequired, aluno.listarTodos);
+rotas.get("/alunos/:id", loginRequired, aluno.listarPorId);
 
 rotas.post("/alunos", loginRequired, aluno.criarAluno);
 
