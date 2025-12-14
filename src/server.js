@@ -1,4 +1,7 @@
 import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+
 import { usuariosRotas } from "./routes/UsuarioRotas.js";
 import { authRotas } from "./routes/AuthRotas.js";
 import { alunosRotas } from "./routes/AlunoRotas.js";
@@ -10,6 +13,9 @@ const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
+app.use(cors());
+app.use(helmet());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

@@ -13,7 +13,7 @@ export class AlunoController {
           peso: true,
           altura: true,
           fotos: {
-            select: { id: true, filename: true },
+            select: { filename: true },
             orderBy: { id: "desc" },
           },
         },
@@ -50,7 +50,7 @@ export class AlunoController {
           peso: true,
           altura: true,
           fotos: {
-            select: { id: true, filename: true },
+            select: { filename: true },
             orderBy: { id: "desc" },
           },
         },
